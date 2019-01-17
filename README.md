@@ -20,30 +20,37 @@ merchant_display_name|merchant_mobile|merchant_email|merchant_name|merchant_secr
 
 ``Response``  
 
-status code - 200
-{
-    "response": {
-        "message": "Merchant registered succesfully",
-        "walletId": "15070"
-    },
-    "status": "success"
-}
+status code 200
 
-status code - 403
 {
-    "response": {
-        "message": "Merchant Forbidden",
-        "walletId": ""
-    },
-    "status": "failed"
-}
+"status": "success", 
+"status_code": 200,
+"response": {
+	"message":"Merchant Registerred successfully",
+	"wallet_id":"15070"	
+},
+"code": "E200"}
 
-status code - 400
+status code 400
+
 {
-    "response": {
-        "message": "Merchant Already Registered",
-        "walletId": ""
-    },
-    "status": "failed"
-}
+"status": "error", 
+"status_code": 400,
+"response": {
+	"message":"Bharat QR Not Enabled",
+	"wallet_id":""	
+},
+"code": "E129"}
+
+
+status code 403
+
+{
+"status": "error", 
+"status_code": 403,
+"response": {
+	"message":"Forbidden, Invalid Cheksum",
+	"wallet_id":""	
+},
+"code": "E127"}
 
